@@ -104,6 +104,7 @@ function playRound(choice, playerChoice)
     checkWinner();
 }
 
+
 function updatePoints() 
 {
     let playerPointText = document.getElementById("player-points");
@@ -126,14 +127,6 @@ function checkWinner()
         winnerFound.setFound = false;
     }
 }
-
-/*function reset()
-{
-    playerPoints = 0;
-    computerPoints = 0;
-    winnerFound.setFound = false;
-    gameText.textContent = "Have fun playing!";
-}*/
 
 function resetDOM() 
 {

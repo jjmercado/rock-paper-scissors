@@ -1,6 +1,11 @@
-let introText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec orci mollis, aliquet ante non, accumsan sem. Quisque at commodo risus. Nunc nec volutpat libero. Nunc sagittis tincidunt fringilla. Mauris elementum risus id felis consectetur blandit. Mauris accumsan, mauris vitae mollis elementum, lorem libero venenatis sem, ut egestas nisi nisl viverra orci. Sed sit amet finibus nulla. Praesent vel hendrerit arcu. Fusce id luctus nibh. Nulla id euismod massa, eget pretium ante. Morbi sit amet elementum erat. Fusce consectetur congue tellus. Duis vehicula, lorem sit amet auctor consectetur, libero diam dignissim lectus, non rutrum justo velit quis enim."
-const div = document.querySelector(".container");
+let introText = "Rock Paper Scissor"
+const body = document.querySelector("body");
+const div = document.createElement("div");
 const para = document.createElement("p");
+
+div.classList = "container";
+
+body.appendChild(div);
 
 for (let index = 0; index < introText.length; index++) 
 {
