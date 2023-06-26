@@ -66,7 +66,7 @@ function playRound(choice, playerChoice)
     {
         if (choice === "rock" && playerChoice === "paper") 
         {
-            playerPoints += 1;
+            playerPoints++;
             gameText.textContent = "Player wins! Paper covers rock";    
         }
         else if (choice === "rock" && playerChoice === "scissor") 
@@ -115,17 +115,11 @@ function updatePoints()
 
 function checkWinner() 
 {
-    if (playerPoints >= points) 
+    if (playerPoints >= points || computerPoints >= points) 
     {
         winnerFound.setFound = true;
+        clearDOM();
         createResetButtons();
-        gameText.textContent = "Player wins! Wan't to play again?"; 
-    }
-    else if (computerPoints >= points) 
-    {
-        winnerFound.setFound = true;
-        createResetButtons();
-        gameText.textContent = "Computer wins! Wan't to play again?";
     }
     else
     {
@@ -133,39 +127,58 @@ function checkWinner()
     }
 }
 
-function reset()
+/*function reset()
 {
     playerPoints = 0;
     computerPoints = 0;
-    updatePoints();
     winnerFound.setFound = false;
     gameText.textContent = "Have fun playing!";
+}*/
+
+function resetDOM() 
+{
+    location.reload();
+}
+
+function clearDOM() 
+{
+    let body = document.querySelector("body");
+
+    while (body.hasChildNodes()) 
+    {
+        body.removeChild(body.firstChild);    
+    }
 }
 
 function createResetButtons() 
 {
     let yesButton = document.createElement("button");
     let noButton = document.createElement("button");   
-    let textContainer = document.querySelector(".container-text");
+    let textContainer = document.createElement("div");
+    let body = document.querySelector("body");
+
+    textContainer.classList = "reset-button-container";
+
+    body.appendChild(gameText);
+    body.appendChild(textContainer);
     
     yesButton.textContent = "Yes";
     noButton.textContent = "No";
+
+    yesButton.classList = "buttons";
+    noButton.classList = "buttons";
 
     textContainer.appendChild(yesButton);
     textContainer.appendChild(noButton);
 
     yesButton.addEventListener("click", () =>
     {
-        reset();
-        textContainer.removeChild(yesButton);
-        textContainer.removeChild(noButton);
+        resetDOM();
     })
 
     noButton.addEventListener("click", () =>
     {
-        reset();
-        textContainer.removeChild(yesButton);
-        textContainer.removeChild(noButton);
+        resetDOM();
     })
 }
 

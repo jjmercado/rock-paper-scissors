@@ -15,36 +15,45 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
-    height: 100%;
+}
+
+h1
+{
+    margin: 0;
 }
 
 .container-header
 {
-    margin-top: 3rem;
+    margin: 1rem;
 }
 
 .container-header h1
 {
-    font-size: 5rem;
-}
-
-.container-header p
-{
     font-size: 3rem;
-    text-align: center;
 }
 
-.container-button
+.container-text p
+{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.container-button, .reset-button-container
 {
     display: flex;
     gap: 2rem;
 }
 
-.container-button button
+.reset-button-container
 {
-    height: 10rem;
-    width: 10rem;
+    justify-content: center;
+}
+
+button
+{
+    height: 8rem;
+    width: 8rem;
 }
 
 .container-text
@@ -57,4 +66,5 @@ body
 #game-text
 {
     font-size: 2rem;
+    text-align: center;
 }
