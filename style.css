@@ -14,6 +14,7 @@ body
     color: red;
     justify-content: center;
     align-items: center;
+    font-family: immortal;
 }
 
 .container
@@ -91,6 +92,7 @@ button
     background-color: black;
     color: red;
     transition: all .2s ease-in-out;
+    font-family: immortal;
 }
 
 @media (max-width: 800px)
@@ -131,4 +133,27 @@ button:hover
     {
         font-size: 2rem;
     }
+}
+
+#paper-button:hover
+{
+    color: transparent;
+    background-image: url(/img/paper.png);
+}
+
+#rock-button:hover
+{
+    color: transparent;
+    background-image: url(/img/rock.png);
+}
+
+#scissor-button:hover
+{
+    color: transparent;
+    background-image: url(/img/scissor.png);
+}
+
+@font-face {
+    font-family: immortal;
+    src: url(/font/Immortal.woff);
 }

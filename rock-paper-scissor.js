@@ -60,7 +60,7 @@ function playRound(choice, playerChoice)
     gameText = document.getElementById("game-text");
     if(choice === playerChoice)
     {
-        gameText.textContent = "Equals! No winner";
+        gameText.textContent = "Tie! No winner";
     }
     else
     {
