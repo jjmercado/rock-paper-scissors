@@ -139,21 +139,29 @@ button:hover
 {
     color: transparent;
     background-image: url(img/paper.png);
+    background-size: cover;
 }
 
 #rock-button:hover
 {
     color: transparent;
     background-image: url(img/rock.png);
+    background-size: cover;
 }
 
 #scissor-button:hover
 {
     color: transparent;
     background-image: url(img/scissor.png);
+    background-size: cover;
 }
 
 @font-face {
     font-family: immortal;
     src: url(font/Immortal.woff);
+}
+
+@media (max-width: 800px)
+{
+    background-size: ;
 }
