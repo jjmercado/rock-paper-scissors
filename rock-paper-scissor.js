@@ -171,7 +171,7 @@ function createResetButtons()
 
     noButton.addEventListener("click", () =>
     {
-        resetDOM();
+        close();
     })
 }
 
