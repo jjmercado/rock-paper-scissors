@@ -138,22 +138,22 @@ button:hover
 #paper-button:hover
 {
     color: transparent;
-    background-image: url(/img/paper.png);
+    background-image: url(img/paper.png);
 }
 
 #rock-button:hover
 {
     color: transparent;
-    background-image: url(/img/rock.png);
+    background-image: url(img/rock.png);
 }
 
 #scissor-button:hover
 {
     color: transparent;
-    background-image: url(/img/scissor.png);
+    background-image: url(img/scissor.png);
 }
 
 @font-face {
     font-family: immortal;
-    src: url(/font/Immortal.woff);
+    src: url(font/Immortal.woff);
 }
